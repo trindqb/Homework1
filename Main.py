@@ -38,16 +38,17 @@ class HomeWork(object):
     def Draw(self,Color,Marker):
         x = np.arange(len(self.W))
         plt.plot(x,self.W,color = Color, marker = Marker, label = 'p='+str(self.p))
-A = HomeWork(1000,20,0.55)
-B = HomeWork(1000,20,0.25)
-C = HomeWork(1000,20,0.50)
+for i in range(100):
+    A = HomeWork(1000,20,0.75)
+    B = HomeWork(1000,20,0.50)
+    C = HomeWork(1000,20,0.20)
 
-A.Draw('red','o')
-B.Draw('blue','1')
-C.Draw('green','*')
+    A.Draw('red','o')
+    B.Draw('g','1')
+    C.Draw('b','*')
 
 
 plt.grid(True)
-plt.legend(loc = 0)
+#plt.legend(loc = 0)
 plt.show()
 
